@@ -2,4 +2,4 @@
 Tomasz Mucha
 _Group 6_
 
-Github Acctions
+Github Acctions Used for deployment 
