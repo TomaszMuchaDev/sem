@@ -2,4 +2,4 @@
 Tomasz Mucha
 _Group 6_
 
-Github Acctions Used for deployment 
+![workflow](https://github.com/<UserName>/<RepositoryName>/actions/workflows/main.yml/badge.svg)
