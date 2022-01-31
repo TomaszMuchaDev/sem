@@ -88,9 +88,16 @@ public class App
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
-            String strSelect =  "SELECT emp_no, first_name, last_name "
-                    + "FROM employees "
-                    + "WHERE emp_no = " + ID;
+            String strSelect =  "Select e.emp_no, e.first_name, e.last_name, s.salary, t.title,  d.dept_name, em.last_name as manager"
+            +"FROM employees e"
+           +" join salaries s on e.emp_no= s.emp_no"
+           + "join titles t on e.emp_no = t.emp_no"
+           + "join dept_emp de on e.emp_no = de.emp_no"
+           + "join departments d on de.dept_no = d.dept_no"
+           + "join dept_manager dm on d.dept_no = dm.dept_no"
+           + "join employees em on dm.emp_no = em.emp_no"
+            + "where e.emp_no = " + ID
+            +" limit 1";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
             // Return new employee if valid.
