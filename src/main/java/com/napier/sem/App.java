@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class App
 {
@@ -111,7 +112,7 @@ public class App
                 emp.salary =rset.getInt("s.salary");
                 emp.title = rset.getString("t.title");
                 emp.dept_name = rset.getString("d.dept_name");
-                emp.manager = rset.getString("manager");
+               // emp.manager = rset.getString("manager");
                 return emp;
             }
             else {
@@ -160,4 +161,11 @@ public class App
         }
     }
 
+    public Department getDepartment(int dept_no) {
+        return null;
+    }
+
+    public ArrayList<Employee> getSalariesByDepartment(Department dept){
+            return  null;
+    }
 }
