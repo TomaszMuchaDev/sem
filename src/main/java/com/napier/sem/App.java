@@ -138,7 +138,7 @@ public class App
                 + " AND salaries.to_date = '9999-01-01'"
                 + " AND titles.to_date = '9999-01-01'"
                 + " AND titles.title = '<title>'"
-                + " ORDER BY employees.emp_no ASCstatement";
+                + " ORDER BY employees.emp_no ASC";
 
     }
 
